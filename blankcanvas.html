@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <body>
-    <canvas id="gameCanvas" width = "600" height = "600"></canvas>
+    <title>My Gmae 2022</title>
+    <canvas id="gameCanvas" width ="600" height ="600"></canvas>
     <script>
         var canvas, canvasContext;
         
@@ -11,16 +12,20 @@
             setInterval(mainloop, 1000/50);
 
         }
+        var playerXpos = 300;
+        var playerYpos = 300;
+        var playerXspeed = 7;
+        var playerYspeed = 7;
+        const PLAYER_SIZE = 15;
 
         function mainloop(){
             colorRect(0,0,canvas.width,canvas.height,'black'); // bg
-            colorRect(100,100,20,20,'red'); // player
+            colorRect(playerXpos,playerYpos,PLAYER_SIZE,PLAYER_SIZE,'green'); // player
         }
 
         function colorRect(x,y,w,h,c){
             canvasContext.fillstyle = c;
             canvasContext.fillRect(x,y,w,h);
-
         }
     </script>
 </body>
